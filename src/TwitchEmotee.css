@@ -1,0 +1,51 @@
+.twitch__emotees__screen {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .twitch__emotees__screen {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content;
+  }
+}
+
+.twitch__search {
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(145deg, #18191a, #242629);
+  border-radius: 24px; */
+  background: #2c2d2f;
+  border-radius: 24px;
+  box-shadow: inset 4.5px 4.5px 9px #161718, inset -4.5px -4.5px 9px #424447;
+  padding: 5px;
+  width: 30%;
+}
+
+.twitch__search input {
+  border: none;
+  flex: 1;
+  background: #88898a;
+  border-radius: 10px;
+  outline: none;
+}
+
+.search__icon {
+  color: #88898a;
+  padding-left: 5px;
+}
+.twitch__emotees__screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.emotees__cards {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 20px;
+}
