@@ -3,14 +3,7 @@
 
   grid-template-columns: repeat(5, 1fr);
 
-  gap: 20px;
-}
-
-@media only screen and (max-width: 500px) {
-  .twitch__emotees__screen {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: max-content;
-  }
+  gap: 10px;
 }
 
 .twitch__search {
@@ -28,6 +21,9 @@
 .twitch__search input {
   border: none;
   flex: 1;
+  font-size: 15px;
+  color: whitesmoke;
+  font-weight: bolder;
   background: #88898a;
   border-radius: 10px;
   outline: none;
@@ -44,8 +40,18 @@
 
 .emotees__cards {
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
   gap: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .twitch__emotees__screen {
+    padding-left: 3%;
+  }
+  .emotees__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: 3%;
+    grid-template-rows: auto;
+  }
 }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './EmoteeCard.css'
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
+import Pulse from 'react-reveal/Pulse';
+
 function EmoteeCard({type,imgid,imgName,imgCode,ext,category}) {
     const [copied, setCopied] = useState(false)
     
@@ -15,7 +17,9 @@ function EmoteeCard({type,imgid,imgName,imgCode,ext,category}) {
           }
     }
     return (
-        <div className = "card"  >
+        <Pulse top>
+
+        <div className = "card" onClick = {copyToClipBoard}  >
             <div className = "card__image">
                 {
                     type === "twitch" ? (<img className="emote-chat emoji yt-formatted-string style-scope yt-live-chat-text-message-renderer"  src={`https://static-cdn.jtvnw.net/emoticons/v1/${imgid}/3.0`} alt = "amotee"/> ) :
@@ -26,8 +30,7 @@ function EmoteeCard({type,imgid,imgName,imgCode,ext,category}) {
                 }
 
             </div>
-            <div className = "card__name">
-            <h3>{imgName}</h3>
+            <div className = "card__name" >
                 <div className = "card__name__copy" onClick = {copyToClipBoard}>
                     <h4>{imgCode}</h4>
                     <FileCopyOutlinedIcon className = "copy__icon" />
@@ -35,7 +38,8 @@ function EmoteeCard({type,imgid,imgName,imgCode,ext,category}) {
             </div>
             
         </div>
-    );
+        </Pulse>    
+        );
 }
 
 export default EmoteeCard;

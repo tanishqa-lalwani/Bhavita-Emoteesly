@@ -10,6 +10,7 @@ import TwitchEmotee from './TwitchEmotee';
 import BttvEmotee from './BttvEmotee';
 import CustomEmotee from './CustomEmotee'
 import {Instagram,Facebook,GitHub,Twitter,LinkedIn} from '@material-ui/icons';
+import Slide from 'react-reveal/Slide';
 
 const options = [
   { id: 0, value: "foo" },
@@ -21,6 +22,8 @@ function App() {
   const [checkBttv, setCheckBttv] = useState(false)
   const [checktwitch, setCheckTwitch] = useState(false)
   const [checkcustom, setCheckCustom] = useState(false)
+  const [checkcustomData, setCheckCustomData] = useState(true)
+
 
 
   const setTwitch = () =>{
@@ -62,24 +65,27 @@ function App() {
       <div className = "main__about__title">
                     <h3>About Me</h3>
                 </div>
+                <Slide top>
+
                 <div className = "main__about__content">
                <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. If you like this theme and want to use it for yourself, checkout the source code and the documentation at Github. You can also find me on JAMstack Themes and on Jekyll Themes.</p>
                 </div>
+                </Slide>
       </div>
       <div className = "app__emotees__section">
                     <h3 className = "app__emotees__section__title">EMOTEELY</h3>
                 <div className = "app__emotees__tabs">
                   <h3 className = "app__emotees__tabs__single" onClick = {setBTTV} >BTTV EMOTTEES</h3>
-                  <h3 className = "app__emotees__tabs__single" onClick = {setTwitch}>TWITCH EMOTTEES</h3>
+               { checkcustomData?<h3 className = "app__emotees__tabs__single" onClick = {setTwitch}>TWITCH EMOTTEES</h3> : <></>}
                   <h3 className = "app__emotees__tabs__single" onClick = {setCustom  } >CUSTOM EMOTTEES</h3>
                 
 
                 </div>
               
-                  {/* {
-                    checkcustom?<CustomEmotee/>: checktwitch?<TwitchEmotee/>:<BttvEmotee/>
-                  } */}
-               
+                   {
+                    checkcustom?<CustomEmotee/>: checktwitch?<TwitchEmotee checkData = {setCheckCustomData}/>:<BttvEmotee/>
+                  } 
+                  
                 
               
       </div>

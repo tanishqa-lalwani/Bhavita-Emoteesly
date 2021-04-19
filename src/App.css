@@ -36,17 +36,28 @@
   border-color: #9ecaed;
   box-shadow: 0 0 10px #9ecaed;
 }
-.main__about__title {
-  text-align: center;
-}
+
 .main__about__title h3 {
+  color: #fbfcfe;
   font-size: 28px;
+  font-weight: 600;
+  text-align: center;
 }
 /* .sidebar {
   flex: 0.3;
   background: blue;
 }*/
+.main__about__content p {
+  text-align: justify;
+  color: #fbfcfe;
+}
 
+.app__emotees__section__title {
+  color: #fbfcfe;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
 .emotees__display {
   display: grid;
 
@@ -82,6 +93,7 @@
   padding: 5px;
   width: 15vw;
   cursor: pointer;
+  color: #e6e7ee;
   font-weight: 500;
 
   box-shadow: 3.9px 3.9px 4px #1a1b1c, -3.9px -3.9px 4px #424346;
@@ -256,29 +268,26 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .app__screen {
-    background-color: royalblue;
+    background-color: purple;
     width: 100%;
   }
-
   .app__screen__about {
-    padding: 6%;
-    height: max-content;
+    padding: 5%;
+    height: fit-content;
   }
   .main__about__content {
     align-content: center;
   }
-  .main__about__title {
-    font-size: 45px;
+  .main__about__title h3 {
+    font-size: 35px;
   }
   .main__about__content p {
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
     color: rgb(173, 171, 171);
 
-    text-align: center;
+    text-align: justify;
+    font-size: 30px;
   }
   .app__emotees__section {
     background-color: peru;
@@ -297,7 +306,8 @@
     font-size: 28px;
   }
   .contact {
-    padding: 6%;
+    padding: 3%;
+    height: fit-content;
   }
   .contact h2 {
     font-size: 50px;
@@ -309,7 +319,9 @@
     align-items: center;
     justify-content: center;
     color: whitesmoke;
-    font-size: 35px;
+    text-align: justify;
+
+    font-size: 30px;
     text-align: center;
     margin-top: 5%;
   }

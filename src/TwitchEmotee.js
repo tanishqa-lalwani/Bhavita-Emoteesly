@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import EmoteeCard from './EmoteeCard';
 import { Twitch } from './FetchApi';
 import SearchIcon from '@material-ui/icons/Search';
+import Fade from 'react-reveal/Fade';
+
 import './TwitchEmotee.css'
-function TwitchEmotee() {
+function TwitchEmotee({checkData}) {
 const [twitchemotes, setTwitchemotes] = useState([])
 const [searchValue, setSearchValue] = useState("")
 
@@ -32,6 +34,7 @@ const [searchValue, setSearchValue] = useState("")
     }
     useEffect(() => {
        getTwitchEmotee();
+       twitchemotes?checkData(true) : checkData(false)
     }, [])
     return (
         <div className = "twitch__emotees__screen">
@@ -39,7 +42,7 @@ const [searchValue, setSearchValue] = useState("")
             <input value = {searchValue} onChange = {findSearch } />
             <SearchIcon className = "search__icon" />
             </div>
-
+          
             <div className = "emotees__cards">
             {
             Object.entries(twitchemotes).map(([twitchemote,id]) => {

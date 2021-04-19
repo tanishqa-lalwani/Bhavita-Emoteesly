@@ -1,6 +1,7 @@
 .card {
   width: 150px;
   height: 150px;
+  cursor: pointer;
   /*
   background: #424856;
   border: 3px solid #b3f4f9;
@@ -65,9 +66,27 @@
   height: 15px !important;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .card {
-    width: 100px;
-    height: 100px;
+    padding: 6%;
+    width: 140px;
+    height: 120px;
+  }
+  .card__name__copy {
+    width: max-content;
+  }
+  .card__name {
+    max-width: 120px;
+  }
+  .card__name h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (width: 320px) {
+  .card {
+    padding: 6%;
+    width: 125px;
+    height: 120px;
   }
 }
