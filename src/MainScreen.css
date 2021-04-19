@@ -218,13 +218,11 @@
 
 @media only screen and (max-width: 414  px) and (min-width: 370px) {
   .main__screen {
-    background-color: orange;
     padding: 15%;
     margin-top: 40%;
   }
   .main__info {
     padding: 15%;
-    background-color: red;
   }
   .main__title h2 {
     font-size: 60px;
@@ -256,7 +254,6 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .main__screen {
-    background-color: aqua;
     margin-bottom: 15%;
   }
   .main__info {

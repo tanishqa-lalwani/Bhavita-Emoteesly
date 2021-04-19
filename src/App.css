@@ -197,12 +197,8 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .App {
-    background-color: palevioletred;
-  }
   .app__screen {
     width: 100%;
-    background-color: palegreen;
     margin-bottom: 40%;
   }
   .app__screen__about {
@@ -263,14 +259,12 @@
 
 @media only screen and (max-width: 414px) and (min-width: 370px) {
   .app__screen {
-    background-color: purple;
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .app__screen {
-    background-color: purple;
     width: 100%;
   }
   .app__screen__about {
@@ -290,7 +284,6 @@
     font-size: 30px;
   }
   .app__emotees__section {
-    background-color: peru;
     padding: 6%;
   }
   .app__emotees__section__title {
