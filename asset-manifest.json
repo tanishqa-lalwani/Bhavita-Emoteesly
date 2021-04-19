@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Bhavita-Emoteesly/static/css/main.31ea2037.chunk.css",
+    "main.js": "/Bhavita-Emoteesly/static/js/main.f08cae77.chunk.js",
+    "main.js.map": "/Bhavita-Emoteesly/static/js/main.f08cae77.chunk.js.map",
+    "runtime-main.js": "/Bhavita-Emoteesly/static/js/runtime-main.990cf13e.js",
+    "runtime-main.js.map": "/Bhavita-Emoteesly/static/js/runtime-main.990cf13e.js.map",
+    "static/js/2.fc610494.chunk.js": "/Bhavita-Emoteesly/static/js/2.fc610494.chunk.js",
+    "static/js/2.fc610494.chunk.js.map": "/Bhavita-Emoteesly/static/js/2.fc610494.chunk.js.map",
+    "index.html": "/Bhavita-Emoteesly/index.html",
+    "static/css/main.31ea2037.chunk.css.map": "/Bhavita-Emoteesly/static/css/main.31ea2037.chunk.css.map",
+    "static/js/2.fc610494.chunk.js.LICENSE.txt": "/Bhavita-Emoteesly/static/js/2.fc610494.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.990cf13e.js",
+    "static/js/2.fc610494.chunk.js",
+    "static/css/main.31ea2037.chunk.css",
+    "static/js/main.f08cae77.chunk.js"
+  ]
+}
